@@ -1,0 +1,62 @@
+{
+  "robots": {
+    "HLTV.org": {
+      "url": "https://www.hltv.org/robots.txt",
+      "status": 403,
+      "disallow_all": false,
+      "raw": null,
+      "error": "403 Forbidden — Cloudflare or server-level block"
+    },
+    "ESL Gaming": {
+      "url": "https://www.eslgaming.com/robots.txt",
+      "status": 200,
+      "disallow_all": true,
+      "raw": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://esl.com/sitemap_index.xml\n",
+      "error": null
+    },
+    "Faceit": {
+      "url": "https://www.faceit.com/robots.txt",
+      "status": 403,
+      "disallow_all": false,
+      "raw": null,
+      "error": "403 Forbidden — Cloudflare or server-level block"
+    },
+    "Valve (Steam)": {
+      "url": "https://store.steampowered.com/robots.txt",
+      "status": 200,
+      "disallow_all": true,
+      "raw": "Host: store.steampowered.com\nUser-Agent: *\nDisallow: /share/\nDisallow: /news/externalpost/\nDisallow: /account/emailoptout/?*token=\nDisallow: /login/?*guestpasskey=\nDisallow: /join/?*redir=\nDisallow: /account/ackgift/\nDisallow: /email/\nDisallow: /widget/\n",
+      "error": null
+    }
+  },
+  "tos": {
+    "HLTV.org": {
+      "url": "https://www.hltv.org/terms",
+      "status": 403,
+      "blocked": true,
+      "error": "HTTP 403 — likely anti-bot protection (Cloudflare/WAF)",
+      "excerpt": null
+    },
+    "ESL Gaming": {
+      "url": "https://www.eslgaming.com/terms-and-conditions",
+      "status": 404,
+      "blocked": false,
+      "error": null,
+      "excerpt": null
+    },
+    "Faceit": {
+      "url": "https://www.faceit.com/en/terms_and_conditions",
+      "status": 403,
+      "blocked": true,
+      "error": "HTTP 403 — likely anti-bot protection (Cloudflare/WAF)",
+      "excerpt": null
+    },
+    "Valve (Steam)": {
+      "url": "https://store.steampowered.com/subscriber_agreement/",
+      "status": 200,
+      "blocked": false,
+      "error": null,
+      "excerpt": "Steam Subscriber Agreement Sign in Store Home Discovery Queue Wishlist Points Shop News Charts Community Home Discussions Workshop Market Broadcasts About Support Change language Get the Steam Mobile App View desktop website © Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. Privacy Policy | Legal | Accessibility | Steam Subscriber Agreement | Refunds | Cookies STORE Home Discovery Queue Wishlist Points Shop News Charts"
+    }
+  }
+}

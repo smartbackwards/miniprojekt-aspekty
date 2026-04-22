@@ -1,0 +1,5 @@
+Platform,Demo hosting,Scraping w ToS,Publiczne API,robots.txt status,Prawo DB (UE),RODO / SteamID,Rekomendacja
+HLTV.org,TAK — pro matches,ZAKAZANY (§2.2),NIE,Istnieje (Cloudflare blokuje odczyt),TAK — sui generis,TAK — dane osobowe,Nie pobierać bez zgody
+Faceit,TAK — matchmaking,ZAKAZANY,TAK — Faceit Data API (klucz wymagany),Do sprawdzenia,TAK,TAK,Użyj oficjalnego API
+ESL Gaming,TAK — archiwa turniejowe,ZAKAZANY,NIE (ESL Play API — deprecated),Do sprawdzenia,TAK,TAK,Kontakt z ESL wymagany
+Valve (CS2),TAK — lokalne + GOTV,Steam SSA §1 — dozwolone użycie osobiste,TAK — Steam Web API (klucz darmowy),200 OK,Częściowe,TAK,Preferowane źródło + API

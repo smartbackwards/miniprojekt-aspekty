@@ -1,0 +1,9 @@
+#,Pytanie,Status,Priorytet
+1,"Czy pobieranie jest RĘCZNE (przeglądarka, bez skryptów)?",✅ Tak — ręczne pobieranie ≠ web scraping (§2.2 nie dotyczy),KRYTYCZNY
+2,Czy cel jest akademicki / niekomercyjny (praca magisterska)?,"✅ Tak — wzmacnia argument uzasadnionego interesu, poza zakresem 'commercially exploit'",KRYTYCZNY
+3,Czy konto na Twitterze jest monetyzowane?,"⚠️ Do weryfikacji — jeśli tak, posty mogą naruszać §2.2 ('commercially exploit')",WYSOKI
+4,Czy stosujesz anonimizację SteamID przed analizą ML?,⚠️ Do wdrożenia — hash + salt lub usunięcie przed zapisem,WYSOKI
+5,Czy masz podstawę prawną RODO (art. 6) dla przetwarzania SteamID?,⚠️ Wymagana analiza — art. 6(1)(f) uzasadniony interes badawczy,WYSOKI
+6,Czy liczba pobieranych demo jest rozsądna (nie masowa)?,✅ Zakładam tak — masowe pobieranie naruszałoby Dyrektywę 96/9/EC,ŚREDNI
+7,Czy dane są przechowywane bezpiecznie i nie są udostępniane publicznie?,⚠️ Do potwierdzenia — wymaga polityki przechowywania dla pracy magisterskiej,ŚREDNI
+8,Czy w pracy magisterskiej odnotowano metodę pozyskania danych?,⚠️ Do dodania — opisz ręczne pobieranie i cel akademicki w sekcji metodologicznej,NISKI
