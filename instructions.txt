@@ -1,0 +1,232 @@
+Zasady
+Każdy student realizuje jeden mini-projekt indywidualnie.
+Mini-projekt powinien być powiązany z tematyką kursu (prawo, etyka, regulacje AI) i najlepiej z Waszym projektem grupowym.
+Wybieracie jedno zadanie z menu poniżej lub proponujecie własne (do zatwierdzenia na zajęciach).
+Do realizacji mini-projektów wręcz zachęcam do korzystania z narzędzi copilot / asystentów AI, na przykład:
+Claude Code — agent AI w terminalu (Anthropic)
+Codex — agent CLI (OpenAI)
+GitHub Copilot — asystent AI w VS Code, JetBrains, Neovim
+Cursor — IDE z wbudowanym AI (fork VS Code)
+Windsurf — IDE z AI, agentic editing
+Aider — open-source pair programming w terminalu
+OpenCode — open-source agent terminalowy
+Replit — IDE w przeglądarce z AI Agent
+Bolt.new — budowanie full-stack aplikacji w przeglądarce
+Continue — open-source wtyczka AI do VS Code/JetBrains
+Terminy i forma oddania
+Do 3. zajęć projektowych każdy student musi mieć ustalony i potwierdzony temat mini-projektu z prowadzącym. Bez potwierdzenia — mini-projekt nie będzie oceniony.
+Oddanie mini-projektu = zaproszenie prowadzącego do repozytorium GitHub (username: laugustyniak) zawierającego kod, opis i efekty pracy. Samo wysłanie linku bez dostępu nie jest traktowane jako oddanie.
+Po upływie ostatecznego terminu automatycznie wykonuję kopię repozytorium do oceny. Oceniam stan repo na moment terminu — późniejsze zmiany nie będą uwzględniane.
+Co jest oceniane
+Nie oceniam czy aplikacja jest ładna ani czy wszystko działa perfekcyjnie. Oceniam:
+
+Proces i dokumentacja (40 pkt) — jak pracowaliście:
+
+Jakie prompty/narzędzia GenAI wykorzystaliście i do czego? Pokażcie rzeczywiste prompty.
+Jakie decyzje podjęliście po drodze i dlaczego?
+Co nie zadziałało i co z tym zrobiliście?
+README z opisem: cel, jak uruchomić, co robi, czego nie robi.
+
+Merytoryka i głębokość analizy (40 pkt) — czy mini-projekt pokazuje zrozumienie aspektów prawnych/etycznych:
+
+Czy wyciągnęliście wnioski z wyników?
+Czy analiza jest pogłębiona, a nie powierzchowna?
+Czy powiązaliście wyniki z Waszym projektem?
+
+Techniczna realizacja (20 pkt) — kod/notebook:
+
+Czy kod jest czytelny i zrozumiały?
+Czy można go uruchomić / zreprodukować wyniki?
+Nie musi być produkcyjny — notebook / skrypt z komentarzami wystarczy.
+Skalowanie — co na jaką ocenę
+Poziom
+Opis
+Base (50-60%)
+Podstawowa implementacja: działa, jest udokumentowana, ma wnioski. Np. skrypt skanujący licencje w jednym repo + tabelka wyników.
+Good (70-80%)
+Głębsza analiza: porównanie podejść, więcej danych, lepsze wnioski. Np. skan licencji + analiza kompatybilności + rekomendacje.
+Excellent (90-100%)
+Kompleksowe podejście: twórcze rozwiązanie, pogłębiona analiza, silne powiązanie z projektem. Np. pipeline audytu licencji z CI/CD + raport kompatybilności + policy dla zespołu.
+
+Menu mini-projektów
+Poniżej przykładowe tematy. Możecie zaproponować własny — skonsultujcie na zajęciach.
+1. Audyt licencji w repozytorium
+Napisz skrypt (Python/Bash/Typescript) skanujący zależności projektu (requirements.txt, package.json, itp.) i sprawdzający ich licencje.
+
+Base: Skrypt wypisuje listę zależności z licencjami. Tabelka wyników.
+Good: + analiza kompatybilności licencji między sobą, oznaczenie konfliktów, wizualizacja.
+Excellent: + rekomendacja licencji dla Waszego projektu, integracja z CI (GitHub Action), policy document.
+2. Skaner danych osobowych (PII) w danych/kodzie
+Narzędzie wykrywające dane osobowe w datasetach lub w kodzie źródłowym.
+
+Base: Skrypt z regexami / użycie biblioteki (np. Presidio, spaCy) do detekcji PII w przykładowym zbiorze danych. Raport co znalazł.
+Good: + kategoryzacja typów PII, ocena ryzyka RODO, porównanie dwóch metod detekcji.
+Excellent: + propozycja pipeline'u anonimizacji, testy na różnych typach danych, analiza false positive/negative.
+3. Model Card / Dataset Card
+Stworzenie profesjonalnej karty modelu lub datasetu zgodnie ze standardami (HuggingFace, Google Model Cards).
+
+Base: Wypełniona karta modelu/datasetu dla zasobu z Waszego projektu — na HuggingFace lub w repo.
+Good: + analiza co inne popularne modele/datasety mają w kartach, porównanie, identyfikacja braków.
+Excellent: + skrypt/template automatycznie generujący szkielet karty z metadanych modelu + analiza w kontekście AI Act.
+4. Analiza bias / fairness modelu
+Notebook analizujący bias i sprawiedliwość modelu ML na danych.
+
+Base: Obliczenie podstawowych metryk fairness (demographic parity, equalized odds) na wybranym modelu/danych. Wnioski.
+Good: + porównanie metryk dla różnych grup, wizualizacje, analiza źródeł bias w danych.
+Excellent: + zastosowanie technik debiasingu, porównanie przed/po, rekomendacje dla zespołu.
+5. Explainability — wyjaśnialność modelu
+Raport z analizy wyjaśnialności modelu z użyciem narzędzi XAI.
+
+Base: SHAP lub LIME na wybranym modelu, wizualizacje feature importance, opis co model "widzi".
+Good: + porównanie SHAP vs LIME, analiza edge cases, identyfikacja potencjalnie nieetycznych features.
+Excellent: + dashboard / interaktywny notebook, rekomendacje jakie features usunąć/zmienić, powiązanie z AI Act.
+6. Porównanie LLM-ów na pytaniach prawnych / etycznych
+Eksperyment: zadajecie kilku LLM-om te same pytania prawne/etyczne dotyczące Waszego projektu i analizujecie odpowiedzi.
+
+Base: 5-10 pytań, 2-3 modele, tabelka porównawcza, analiza poprawności odpowiedzi.
+Good: + systematyczna ewaluacja (accuracy, hallucinations, citing sources), większa skala pytań.
+Excellent: + RAG z dokumentami prawnymi (AI Act, RODO) vs vanilla LLM, analiza kiedy LLM się myli i dlaczego.
+7. Klasyfikator ryzyka AI Act
+Narzędzie pomagające zaklasyfikować system AI według kategorii ryzyka AI Act.
+
+Base: Skrypt/formularz z pytaniami prowadzącymi do klasyfikacji ryzyka + test na Waszym projekcie.
+Good: + baza obowiązków per kategoria ryzyka, generowanie checklists, porównanie z innymi systemami.
+Excellent: + powiązanie z konkretnymi artykułami AI Act, rekomendacje compliance, analiza luk.
+8. Pipeline anonimizacji danych
+Implementacja procesu anonimizacji/pseudonimizacji danych.
+
+Base: Skrypt anonimizujący wybrane typy danych (imiona, emaile, adresy) w przykładowym zbiorze.
+Good: + porównanie metod (masking, generalization, k-anonymity), metryki użyteczności danych po anonimizacji.
+Excellent: + differential privacy, analiza trade-off prywatność vs użyteczność, testy re-identyfikacji.
+9. Analiza Terms of Service / regulaminów API AI
+Porównanie regulaminów usług AI (OpenAI, Anthropic, Google, Meta) pod kątem praw do danych i wyników.
+
+Base: Przeczytanie i porównanie ToS 2-3 dostawców w tabeli: kto jest właścicielem outputu, czy dane treningowe są wykorzystywane, limity użycia.
+Good: + analiza pod kątem Waszego projektu — czy korzystacie zgodnie z ToS, identyfikacja ryzyk.
+Excellent: + narzędzie/skrypt parsujący ToS z użyciem LLM i generujący podsumowanie kluczowych klauzul, porównanie zmian ToS w czasie.
+10. Detekcja treści generowanych przez AI
+Narzędzie lub eksperyment badający wykrywalność treści wygenerowanych przez AI.
+
+Base: Porównanie 2-3 detektorów (GPTZero, Originality.ai, watermarking) na zbiorze tekstów ludzkich i AI-generowanych. Metryki.
+Good: + analiza jak parafrazowanie/prompty wpływają na wykrywalność, confusion matrix, wnioski prawne (plagiat, prawo autorskie).
+Excellent: + własny prosty klasyfikator (fine-tuned lub statystyczny), porównanie z komercyjnymi, analiza implikacji dla edukacji/publikacji.
+11. Ślad węglowy trenowania / inferencji modeli
+Obliczenie i analiza emisji CO2 związanych z ML w Waszym projekcie.
+
+Base: Użycie CodeCarbon / ML CO2 Impact do zmierzenia śladu węglowego trenowania/inferencji modelu. Raport z wynikami.
+Good: + porównanie różnych modeli/architektur pod kątem emisji vs. jakości, wizualizacje.
+Excellent: + rekomendacje optymalizacji (distillation, quantization, green compute regions), analiza w kontekście ESG i regulacji środowiskowych.
+12. Prompt injection — testy bezpieczeństwa LLM
+Testowanie odporności aplikacji LLM na ataki prompt injection.
+
+Base: Zbiór 10-15 ataków prompt injection na wybranej aplikacji/API LLM, dokumentacja wyników (co przeszło, co nie).
+Good: + kategoryzacja typów ataków, porównanie odporności 2-3 modeli, analiza ryzyk prawnych (kto odpowiada za output).
+Excellent: + implementacja mechanizmów obrony (guardrails, input sanitization), testy przed/po, rekomendacje bezpieczeństwa.
+13.Generator polityki prywatności dla projektu AI
+Narzędzie generujące draft polityki prywatności zgodnej z RODO dla projektu wykorzystującego AI.
+
+Base: Skrypt/notebook generujący politykę prywatności na podstawie ankiety/formularza o projekcie (jakie dane, cele, odbiorcy).
+Good: + walidacja wygenerowanej polityki z checklistą RODO, porównanie z politykami znanych serwisów AI.
+Excellent: + wersjonowanie polityki (co zmienić gdy projekt się rozwija), analiza polityk w różnych jurysdykcjach (EU vs US).
+14. Scraping a prawo — analiza legalności zbierania danych
+Analiza prawna i techniczna web scrapingu w kontekście Waszego projektu.
+
+Base: Przegląd robots.txt i ToS 5-10 źródeł danych dla projektu + tabelka: co wolno, czego nie, na jakiej podstawie.
+Good: + implementacja "polite scraper" respektującego robots.txt i rate limity, analiza orzecznictwa (hiQ vs LinkedIn, itp.).
+Excellent: + narzędzie automatycznie sprawdzające legalność scrapingu dla podanego URL (robots.txt + ToS + licencja danych), rekomendacje alternatyw (API, datasety).
+15. Audyt dostępności (accessibility) interfejsu AI
+Testowanie dostępności interfejsu/aplikacji AI dla osób z niepełnosprawnościami.
+
+Base: Audyt WCAG 2.1 wybranej aplikacji AI (np. Waszej lub publicznej) z użyciem narzędzi (axe, Lighthouse). Lista problemów.
+Good: + propozycje napraw z implementacją wybranych, analiza jak bias modelu wpływa na dostępność (np. ASR dla akcentów).
+Excellent: + testy z użytkownikami / symulacja screen reader, analiza wymagań dostępności w AI Act, porównanie z konkurencją.
+16. Datasheet for Datasets — dokumentacja zbioru danych
+Stworzenie pełnej dokumentacji datasetu wg frameworka "Datasheets for Datasets" (Gebru et al.).
+
+Base: Wypełniony datasheet dla jednego zbioru danych z projektu — motywacja, skład, zbieranie, preprocessing, zastosowania, dystrybucja.
+Good: + analiza braków w dokumentacji popularnych datasetów z Waszej dziedziny, porównanie standardów (Datasheets vs Croissant vs HF Dataset Card).
+Excellent: + skrypt automatycznie generujący szkielet datasheetu z metadanych datasetu + analiza etyczna (kto jest reprezentowany, kto nie).
+17. Monitoring dryfu modelu a etyka
+System monitorujący drift modelu ML i jego implikacje etyczne.
+
+Base: Notebook symulujący data/concept drift i mierzący zmianę metryk (accuracy, fairness) w czasie. Wnioski.
+Good: + alerty na pogorszenie metryk fairness, wizualizacja dryfu per grupa demograficzna.
+Excellent: + pipeline z automatycznym retrainingiem / flagowaniem, analiza kto ponosi odpowiedzialność za decyzje modelu po drycie (AI Act, RODO).
+18. Porównanie licencji modeli na HuggingFace
+Analiza ekosystemu licencji modeli ML na HuggingFace Hub.
+
+Base: Skrypt pobierający licencje N najpopularniejszych modeli z HuggingFace (API), statystyki rozkładu licencji, wizualizacja.
+Good: + analiza kompatybilności (które modele można łączyć w pipeline), identyfikacja modeli bez licencji lub z niestandardowymi licencjami.
+Excellent: + rekomendator licencji ("podaj swój use case, dostaniesz listę kompatybilnych modeli"), analiza trendów licencyjnych w czasie.
+19. Synthetic data — generowanie danych syntetycznych z zachowaniem prywatności
+Generowanie danych syntetycznych jako alternatywy dla danych osobowych.
+
+Base: Wygenerowanie syntetycznego datasetu (np. SDV, Faker, CTGAN) z datasetu zawierającego dane wrażliwe. Porównanie rozkładów.
+Good: + metryki prywatności (re-identyfikacja, membership inference), metryki użyteczności (model accuracy na syntetycznych vs oryginalnych).
+Excellent: + porównanie metod (rule-based vs GAN vs diffusion), analiza prawna — czy dane syntetyczne podlegają RODO, analiza przydatności w Waszym projekcie.
+20. AI incident tracker — baza wypadków AI
+Analiza incydentów AI z publicznych baz (AIAAIC, AI Incident Database) w kontekście Waszego projektu.
+
+Base: Przeszukanie baz incydentów AI, wybranie 5-10 przypadków zbliżonych do Waszego projektu, analiza co poszło nie tak.
+Good: + kategoryzacja ryzyk, mapowanie na kategorie AI Act, wnioski prewencyjne dla Waszego projektu.
+Excellent: + narzędzie przeszukujące bazę incydentów po słowach kluczowych z automatycznym podsumowaniem (LLM), dashboard ryzyk.
+21. Consent management — mechanizm zgód użytkownika
+Implementacja systemu zarządzania zgodami (consent) zgodnego z RODO.
+
+Base: Prototyp formularza zgód z checkboxami (cele przetwarzania, marketing, profilowanie), zapisujący wybory użytkownika.
+Good: + mechanizm wycofania zgody, logowanie historii zmian, analiza wymagań RODO art. 7.
+Excellent: + integracja z aplikacją Waszego projektu, porównanie z rozwiązaniami komercyjnymi (CookieBot, OneTrust), analiza Consent Mode v2 (Google).
+22. Watermarking modeli ML
+Implementacja watermarku w modelu ML w celu ochrony IP.
+
+Base: Implementacja prostego watermarku (np. backdoor-based) w modelu klasyfikacyjnym, weryfikacja że watermark przetrwał fine-tuning.
+Good: + porównanie metod (backdoor vs fingerprinting vs output watermarking), analiza trade-off jakość modelu vs wykrywalność.
+Excellent: + testy odporności na ataki (pruning, fine-tuning, distillation), analiza prawna skuteczności watermarku jako dowodu własności.
+23. Right to be forgotten — implementacja usuwania danych
+Implementacja mechanizmu "prawa do bycia zapomnianym" (RODO art. 17) w kontekście ML.
+
+Base: Skrypt usuwający dane użytkownika z datasetu + analiza czy model "zapamięta" usunięte dane (membership inference test).
+Good: + porównanie: retrenowanie od zera vs machine unlearning, metryki skuteczności usunięcia.
+Excellent: + implementacja machine unlearning (np. SISA), analiza kosztów compliance, rekomendacje dla Waszego projektu.
+24. Analiza regulaminów open-source AI (RAIL, OSAID)
+Badanie nowych modeli licencjonowania AI — Responsible AI Licenses (RAIL) i Open Source AI Definition.
+
+Base: Porównanie RAIL vs tradycyjnych licencji open-source (MIT, Apache) — co dodają, co ograniczają. Tabelka 3-5 licencji RAIL.
+Good: + analiza czy popularne modele (Llama, Mistral, Stable Diffusion) spełniają definicję "open source AI" wg OSAID, wnioski dla projektu.
+Excellent: + narzędzie oceniające "stopień otwartości" modelu (dane, wagi, kod, dokumentacja), propozycja licencji RAIL dla Waszego modelu.
+25. Automated fact-checking — weryfikacja outputu LLM
+Narzędzie do automatycznej weryfikacji faktów generowanych przez LLM.
+
+Base: Pipeline: LLM generuje odpowiedź → skrypt wyciąga twierdzenia → weryfikacja z wiarygodnym źródłem. Test na 10-20 pytaniach.
+Good: + metryki (precision, recall halucynacji), porównanie modeli, kategoryzacja typów błędów.
+Excellent: + analiza implikacji prawnych halucynacji (odpowiedzialność, AI Act art. 52), rekomendacje guardrails, integracja z Waszym projektem.
+26. DPIA — Data Protection Impact Assessment
+Przeprowadzenie oceny skutków przetwarzania danych (DPIA) dla Waszego projektu AI.
+
+Base: Wypełnienie szablonu DPIA (np. CNIL, ICO) dla Waszego projektu — opis przetwarzania, ocena konieczności, ryzyka, środki zaradcze.
+Good: + narzędzie/formularz automatyzujący DPIA z pytaniami prowadzącymi i generowaniem raportu.
+Excellent: + porównanie z DPIA znanych systemów AI, mapowanie ryzyk na wymagania AI Act, plan mitygacji z priorytetami.
+27. Adversarial examples — odporność modelu na ataki
+Testowanie odporności modelu na adversarial examples i analiza implikacji.
+
+Base: Generowanie adversarial examples (FGSM, PGD) dla wybranego modelu, pomiar spadku accuracy. Wnioski.
+Good: + porównanie metod ataku, analiza które klasy/grupy są najbardziej podatne, implikacje etyczne (dyskryminacja).
+Excellent: + implementacja obrony (adversarial training, input preprocessing), analiza odpowiedzialności prawnej za decyzje na podstawie zaatakowanych danych.
+28. Copyright w danych treningowych — analiza duplikatów
+Wykrywanie potencjalnych naruszeń praw autorskich w danych treningowych.
+
+Base: Skrypt szukający duplikatów / near-duplicates w datasecie (MinHash, SimHash), analiza skąd pochodzą.
+Good: + porównanie fragmentów z datasetu ze źródłami online, szacowanie skali problemu, analiza prawna.
+Excellent: + pipeline do automatycznego filtrowania problematycznych danych, analiza orzecznictwa (NYT vs OpenAI, Getty vs Stability AI), rekomendacje.
+29. Własny temat
+Zaproponuj własny mini-projekt powiązany z tematyką kursu. Skonsultuj temat i zakres na zajęciach projektowych przed rozpoczęciem pracy.
+Struktura repozytorium
+Repozytorium mini-projektu powinno zawierać:
+
+mini-projekt/
+├── README.md          # Cel, opis, jak uruchomić, wnioski
+├── PROCESS.md         # Dokumentacja procesu: prompty, decyzje, co nie zadziałało
+├── kod/notebooki      # Skrypty, notebooki Jupyter
+└── wyniki/            # Wykresy, tabelki, raporty (opcjonalnie)
+
+PROCESS.md jest tak samo ważny jak kod. Pokażcie jak pracowaliście — jakie narzędzia AI użyliście, jakie prompty pisaliście, co iterowaliście. To jest kurs o aspektach AI — chcę zobaczyć, że świadomie korzystacie z tych narzędzi.
